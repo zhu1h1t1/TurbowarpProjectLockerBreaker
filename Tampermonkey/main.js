@@ -42,13 +42,13 @@
 
     //实现清除遮罩层
     const intervalId = setInterval(() => {
-        var bg_div = document.querySelector('div[class^="bg_cls_"]');
-        var overlay_div = document.querySelector('div[class^="overlay_cls_"]');
-        if (bg_div != undefined && overlay_div != undefined) {
+        let bg_div = document.querySelector('div[class^="bg_cls_"]');
+        let overlay_div = document.querySelector('div[class^="overlay_cls_"]');
+        if (bg_div !== undefined && overlay_div !== undefined) {
             bg_div.remove();
             overlay_div.remove();
             resetEventListener();
-        }else {
+        } else {
             console.log("未检测到输入密码的界面");
         }
     }, 250);
